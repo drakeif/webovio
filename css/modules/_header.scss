@@ -1,0 +1,80 @@
+.header {
+    padding-top: 2.5rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    @include media(500) {
+        padding-top: 1rem;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        @include media(500) {
+            width: 15rem;
+        }
+    }
+    &__btn {
+        button {
+            position: relative;
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            background: $btn;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: $tr;
+            span {
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $black;
+                width: 1.8rem;
+                height: .18rem;
+                pointer-events: none;
+                transition: $tr;
+                &:nth-child(1) {
+                    top: 37%;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    opacity: 1;
+                }
+                &:nth-child(3) {
+                    top: 63%;
+                }
+            }
+            &:hover {
+                transform: scale(1.1);
+                background: $accent;
+            }
+            &.active {
+                background: $accent;
+                transform: scale(1.1);
+                span {
+                    width: 2.3rem;
+                    &:nth-child(1) {
+                        top: 50%;
+                        left: 22%;
+                        transform: rotate(-45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        top: 50%;
+                        left: 22%;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+}

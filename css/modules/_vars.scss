@@ -1,0 +1,46 @@
+// COLORS
+$titleMainColor: #ffffff;
+$titleSecondColor: #4D533C;
+$light: rgba(#213842, .6);
+$forDescribe: #4D533C;
+$dark: #152934;
+$ultraLight: #D4D6D4;
+$accent: #FFD723;
+$white: #ffffff;
+$black: #000000;
+$btn: #F5F6F7;
+// MEDIA
+@mixin media($w) {
+    @media only screen and (max-width: $w + 'px') {
+        @content;
+    }
+}
+// TRANSITION
+$tr: .2s linear;
+// LINK
+@mixin link($col, $arr) {
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: underline;
+    color: $col;
+    transition: $tr;
+    &:before {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        border-top: .1rem solid $arr;
+        border-right: .1rem solid $arr;
+        transform: rotate(45deg); 
+    }
+    &:hover {
+        text-decoration: none;
+        padding-left: 3rem;
+    }
+}
+

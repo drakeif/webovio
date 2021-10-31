@@ -1,0 +1,44 @@
+.intro {
+    background: center / cover no-repeat url('../images/bg.jpg');
+    height: 100vh;
+    @include media(768) {
+        background-position: right;
+    }
+    @include media(500) {
+        background-position: left;
+    }
+    &__inner {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__info {
+        max-width: 62rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+        @include media(500) {
+            row-gap: 1.5rem;
+        }
+        &_p1 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: $white;
+            @include media(500) {
+                font-size: 1.2rem;
+            }
+        }
+        &_p2 {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: $white;
+            @include media(500) {
+                font-size: 1.4rem;
+            }
+        }
+        &_link {
+            @include link($accent, $accent);
+        }
+    }
+}
