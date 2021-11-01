@@ -19,6 +19,8 @@
         }
     }
     &__btn {
+        position: relative;
+        z-index: 11;
         button {
             position: relative;
             display: block;

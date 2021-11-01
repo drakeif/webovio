@@ -16,6 +16,9 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
+    &.active {
+        overflow: hidden;
+    }
 }
 img {
     display: inline-block;
@@ -46,3 +49,5 @@ p {
 }
 @import 'modules/header';
 @import 'modules/intro';
+
+@import 'modules/modal';
