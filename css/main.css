@@ -351,8 +351,7 @@ p {
         .modal__links a {
           font-size: 4rem; } }
       .modal__links a:hover {
-        color: #FFD723;
-        text-decoration: underline; }
+        color: #FFD723; }
   .modal__follow {
     position: relative; }
     .modal__follow h3 {
