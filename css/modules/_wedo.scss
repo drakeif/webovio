@@ -1,0 +1,136 @@
+.wedo {
+    padding: 0 0 15rem 0;
+    position: relative;
+    @include media(500) {
+        padding: 8rem 0 2rem 0;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        width: 127rem;
+        height: 23rem;
+        background: $white;
+        box-shadow: 0 2rem 3rem rgba($black, .3);
+        position: absolute;
+        right: 0;
+        top: -11.5rem;
+        z-index: 10;
+        @include media(1300) {
+            width: 110rem;
+        }
+        @include media(1120) {
+            width: 90rem;
+            height: 18rem;
+            top: -9rem;
+        }
+        @include media(920) {
+            width: 70rem;
+        }
+        @include media(720) {
+            width: 50rem;
+            height: 15rem;
+            top: -7.5rem;
+        }
+        @include media(520) {
+            width: 30rem;
+            height: 12rem;
+            top: -6rem;
+        }
+    }
+    &__brands {
+        padding: 0 3rem;
+        width: 100%;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        column-gap: 1rem;
+        color: $forDescribe;
+        @include media(500) {
+            flex-direction: column;
+            align-items: center;
+            column-gap: 0;
+            row-gap: 2rem;
+        }
+    }
+    &__about {
+        flex: 0 1 47.5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        @include media(768) {
+            row-gap: 1.5rem;
+        }
+        @include media(500) {
+            flex: 0 1 auto;
+            row-gap: 1rem;
+        }
+        p {
+            &:nth-child(1) {
+                font-size: 1.4rem;
+            }
+            &:nth-child(2) {
+                font-size: 1.6rem;
+            }
+        }
+        a {
+            @include link($ultraLight, $ultraLight)
+        }
+    }
+    &__author {
+        padding: 0 .8rem 6rem 4rem;
+        width: 47rem;
+        height: 64rem;
+        background-color: $white;
+        display: flex;
+        align-items: flex-end;
+        @include media(768) {
+            height: 50rem;
+        }
+        @include media(500) {
+            padding: 0 .5rem 3rem 2rem;
+            width: 100%;
+            height: 35rem;
+        }
+        &_aboutMe {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5rem;
+            @include media(500) {
+                row-gap: 2.5rem;
+            }
+        }
+        &_legend {
+            p {
+                font-size: 2rem;
+                font-style: italic;
+                line-height: 2;
+                @include media(768) {
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+        &_person {
+            display: flex;
+            align-items: center;
+            column-gap: 3rem;
+        }
+        &_avatar {
+            width: 9rem;
+            height: 9rem;
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+            row-gap: .5rem;
+            p {
+                line-height: 1.1;
+                @include media(768) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}

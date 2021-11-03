@@ -14,6 +14,7 @@
         align-items: center;
     }
     &__logo {
+        cursor: pointer;
         @include media(500) {
             width: 15rem;
         }
