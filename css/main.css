@@ -142,9 +142,11 @@ p {
     @media only screen and (max-width: 500px) {
       .header__logo {
         width: 15rem; } }
+    .header__logo.no--logo {
+      visibility: hidden; }
   .header__btn {
     position: relative;
-    z-index: 11; }
+    z-index: 20; }
     .header__btn button {
       position: relative;
       display: block;
@@ -198,6 +200,15 @@ p {
             left: 22%;
             -webkit-transform: rotate(45deg);
                     transform: rotate(45deg); }
+  .header.active {
+    padding: 1rem 0;
+    position: fixed;
+    background: #4D533C;
+    z-index: 20;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear; }
+  .header.no--bg {
+    background: transparent; }
 
 .intro {
   background: center/cover no-repeat url("../images/bg.jpg");
@@ -393,6 +404,8 @@ p {
         padding-left: 3rem; }
   .wedo__author {
     padding: 0 .8rem 6rem 4rem;
+    -webkit-box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
     width: 47rem;
     height: 64rem;
     background-color: #ffffff;

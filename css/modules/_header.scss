@@ -18,10 +18,13 @@
         @include media(500) {
             width: 15rem;
         }
+        &.no--logo {
+            visibility: hidden;
+        }
     }
     &__btn {
         position: relative;
-        z-index: 11;
+        z-index: 20;
         button {
             position: relative;
             display: block;
@@ -79,5 +82,15 @@
                 }
             }
         }
+    }
+    &.active {
+        padding: 1rem 0;
+        position: fixed;
+        background: $forDescribe;
+        z-index: 20;
+        transition: $tr;
+    }
+    &.no--bg {
+        background: transparent;
     }
 }
