@@ -706,6 +706,9 @@ p {
           -ms-flex-direction: column;
               flex-direction: column;
       row-gap: .5rem; }
+      @media only screen and (max-width: 500px) {
+        .projects__author_info {
+          row-gap: 0; } }
       .projects__author_info h3 {
         font-size: 1.6rem; }
       .projects__author_info p {

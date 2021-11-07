@@ -164,6 +164,9 @@
             display: flex;
             flex-direction: column;
             row-gap: .5rem;
+            @include media(500) {
+                row-gap: 0;
+            }
             h3 {
                 font-size: 1.6rem;
             }
