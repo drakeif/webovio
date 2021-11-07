@@ -1,6 +1,9 @@
 .wedo {
     padding: 0 0 15rem 0;
     position: relative;
+    @include media(768) {
+        padding: 0 0 5rem 0;
+    }
     @include media(500) {
         padding: 8rem 0 2rem 0;
     }
@@ -67,6 +70,7 @@
             row-gap: 1rem;
         }
         p {
+            color: $light;
             &:nth-child(1) {
                 font-size: 1.4rem;
             }

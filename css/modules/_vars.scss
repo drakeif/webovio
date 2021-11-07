@@ -13,7 +13,7 @@ $body: #F2F2F2;
 $modal: rgba($black, .9);
 // MEDIA
 @mixin media($w) {
-    @media only screen and (max-width: $w + 'px') {
+    @media only screen and (max-width: #{$w + px}) {
         @content;
     }
 }
@@ -45,4 +45,3 @@ $tr: .2s linear;
         padding-left: 3rem;
     }
 }
-
