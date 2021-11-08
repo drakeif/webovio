@@ -11,6 +11,8 @@ $black: #000000;
 $btn: #F5F6F7;
 $body: #F2F2F2;
 $modal: rgba($black, .9);
+$footer: #444A34;
+$label: #fafafa;
 // MEDIA
 @mixin media($w) {
     @media only screen and (max-width: #{$w + px}) {

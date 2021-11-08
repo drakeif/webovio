@@ -52,7 +52,7 @@
         @include media(768) {
            flex-wrap: wrap;
            justify-content: center;
-           row-gap: 7rem;
+           row-gap: 8rem;
         }
     }
     &__picture {
@@ -122,6 +122,16 @@
         position: absolute;
         bottom: -7rem;
         right: -5rem;
+        &.left {
+            right: auto;
+            left: -7rem;
+            @include media(768) {
+                left: 5rem;
+            }
+            @include media(768) {
+                left: 1rem;
+            }
+        }
         @include media(768) {
             height: 15rem;
             right: 5rem;
