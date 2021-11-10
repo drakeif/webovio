@@ -13,6 +13,8 @@ $body: #F2F2F2;
 $modal: rgba($black, .9);
 $footer: #444A34;
 $label: #fafafa;
+$footerSecond: #B6C197;
+$footerLine: #5D6544;
 // MEDIA
 @mixin media($w) {
     @media only screen and (max-width: #{$w + px}) {

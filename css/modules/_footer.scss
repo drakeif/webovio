@@ -1,7 +1,13 @@
 .footer {
     position: relative;
-    padding: 25rem 0;
-    background-color: $footer;
+    padding: 25rem 0 2rem;
+    background: $footer url('../images/footer.png') no-repeat center / cover;
+    @include media(768) {
+        padding: 15rem 0 2rem;
+    }
+    @include media(500) {
+        padding: 10rem 0 1rem;
+    }
     &__label {
         padding: 3rem;
         background-color: $label;
@@ -44,6 +50,185 @@
             a {
                 @include link($light, $light);
             }
+        }
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        column-gap: 10rem;
+        margin-bottom: 10rem;
+        @include media(950) {
+            margin-bottom: 5rem;
+        }
+        @include media(768) {
+            column-gap: 5rem;
+            margin-bottom: 3rem;
+        }
+        @include media(500) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 3rem;
+        }
+        h4 {
+            color: $footerSecond;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            @include media(500) {
+                margin-bottom: 1rem;
+            }
+        }
+        a {
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        address {
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-style: normal;
+        }
+    }
+    &__middle {
+        padding: 5rem 0;
+        margin-bottom: 2rem;
+        border-top: .1rem solid $footerLine;
+        border-bottom: .1rem solid $footerLine;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include media(950) {
+            padding: 3rem 0;
+            flex-direction: column;
+            row-gap: 5rem;
+        }
+        @include media(500) {
+            padding: 2rem 0;
+            row-gap: 3rem;
+            margin-bottom: 1rem;
+        }
+        h4 {
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            @include media(500) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                color: $footerSecond;
+                font-size: 1.6rem;
+                font-weight: 300;
+                @include media(500) {
+                    font-size: 1.4rem;
+                }
+            }
+            li:not(:last-child) { 
+                margin-bottom: 2rem;
+                @include media(500) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    &__about {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 10rem;
+        @include media(768) {
+            column-gap: 5rem;
+        }
+        @include media(500) {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+    }
+    &__divide {
+        width: 0.1rem;
+        height: 22.4rem;
+        background-color: $footerLine;
+        @include media(950) {
+            display: none;
+        }
+    }
+    &__get {
+        max-width: 32rem;
+        h4 {
+            color: $white;
+            font-size: 1.6rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            @include media(500) {
+                margin-bottom: 1.5rem;
+            }
+        }
+        p {
+            color: $footerSecond;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            @include media(500) {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+        }
+        a {
+            color: $white;
+            font-size: 2.4rem;
+            font-weight: 500;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+            @include media(500) {
+                font-size: 1.8rem;
+            }
+        }
+        &_social {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+            i {
+                font-size: 3rem;
+                color: $footerSecond;
+                cursor: pointer;
+                &:hover {
+                    color: $accent;
+                }
+            }
+            @include media(500) {
+                column-gap: 1rem;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-size: 1.4rem;
+            color: $footerSecond;
+            @include media(500) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    &__logo {
+        max-width: 20rem;
+        @include media(500) {
+            max-width: 12rem;
         }
     }
 }
